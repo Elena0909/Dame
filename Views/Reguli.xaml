@@ -1,0 +1,120 @@
+﻿<Window x:Class="MVVMPairs.Views.Reguli"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVMPairs.Views"
+        mc:Ignorable="d"
+        Title="Reguli" Height="450" Width="800"       
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+
+        <Image Stretch="UniformToFill" 
+               Source="/MVVMPairs;component/Resources/lemn.jpg"/>
+
+        <Button Content="Back" 
+                FontSize="20"
+                Foreground="White"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Height="32" Width="48"
+                Click="Back_Click" Margin="24,15,0,0">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="TextElement.FontFamily" Value="Font"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Black"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="50" Height="32"
+                            CornerRadius="30"
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="X" 
+                FontSize="25"
+                Foreground="Black"
+                HorizontalAlignment="Left" 
+                Margin="734,0,0,0" 
+                VerticalAlignment="Top" 
+                Height="32" Width="32"
+                Click="Close_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="TextElement.FontFamily" Value="Font"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Red"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="28" Height="28"
+                            CornerRadius="50"
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+
+        <Label Content="Regulile jocului" 
+               HorizontalAlignment="Left" 
+               FontSize="27"
+               Foreground="White"
+               Margin="301,18,0,0" VerticalAlignment="Top"/>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,63,0,9.6">
+            <StackPanel>
+
+                <Label Content="1.Piesele se pot muta doar în față, pe diagonală, câte un pătrat (numai pe pătratele negre)." 
+               FontSize="15"
+               Width="751"
+               Foreground="White"/>
+                <Image Height="147" Width="195" Source="D:/anuII/MVP/Dame/resurse/1.jpg"/>
+
+                <Label Content="2. Când două piese opuse se confruntă jucătorulcare este la mutare trebuie să captureze piesa adversarului&#xD;&#xA; (dacă pătratul din spatele piesei opuse este liber) urmând a ocupa locul liber."
+                       Foreground="White" FontSize="15" Width="748" Height="49"/>
+                <Image Height="141" Width="195" Source="D:/anuII/MVP/Dame/resurse/2.jpg"/>
+
+                <Label Content="3. Dacă este posibilă o captură multiplă (în lanț), jucătorul trebuie să captureze toate piesele din lanț."
+                       Foreground="White" FontSize="15" Width="748" Height="28"/>
+                <Image Height="147" Width="195" Source="D:/anuII/MVP/Dame/resurse/3.jpg"/>
+
+                <Label Content="4. Piesa care ajunge pe ultimul rând din partea opusă a tablei de joc devine Regină."
+                       Foreground="White" FontSize="15" Width="748" Height="28"/>
+                <Image Height="147" Width="195" Source="D:/anuII/MVP/Dame/resurse/4.jpg"/>
+
+                <Label Content="5. O Regină se poate deplasa atât în fată cât și în spate pe diagonală, tot câte un pătrat."
+                       Foreground="White" FontSize="15" Width="748" Height="28"/>
+                <Image Height="147" Width="195" Source="D:/anuII/MVP/Dame/resurse/5.jpg"/>
+
+                <Label Content="6. Câștigătorul jocului este cel care reușește să captureze toate piesele adversarului.&#xD;&#xA; "
+                       Foreground="White" FontSize="15" Width="748" Height="28"/>
+
+                <Label Content="Joc realizat de Ghinea Alexandra Elena (Grupa 10LF392)-> alexandra.ghinea@student.unitbv.ro&#xD;&#xA; "
+                       Foreground="White" FontSize="14" Width="748" Height="28"/>
+
+            </StackPanel>
+        </ScrollViewer>
+
+
+    </Grid>
+</Window>
